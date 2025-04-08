@@ -1,5 +1,5 @@
 import server from "../server";
-import { validarCEP, contarPalavras} from "../controllers/ApiController";
+import { validarCEP, contarPalavras, verificarSenhaForte, ehPar} from "../controllers/ApiController";
 
 describe("Testes da API", () => {
   it("Deve validar cep", async () =>{
@@ -12,7 +12,18 @@ describe("Testes da API", () => {
     expect(contarPalavras("  ESPAÇOS EXTRAS  ")).toEqual(2);
   });
 
+  it("Deve verificar se a senha é forte", async () =>{
+    expect(verificarSenhaForte("Senha123!")).toBe(true);
+    expect(verificarSenhaForte("senha")).toBe(false);
+  });
+
+  it("Deve verificar se o número é par", async () =>{
+    expect(ehPar("4")).toBe(true);
+    expect(ehPar("3")).toBe(false);
+  });
+
 });
+
 
 
 

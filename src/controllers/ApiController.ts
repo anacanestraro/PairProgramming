@@ -27,3 +27,12 @@ export function contarPalavras(frase:string):number{
   console.log(resultado); 
   return resultado; 
 }
+
+export const ehPar = (numero: number): boolean => {
+  return numero % 2 === 0;
+};
+
+export const verificarSenhaForte = (senha: string): boolean => {
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  return regex.test(senha);
+};
