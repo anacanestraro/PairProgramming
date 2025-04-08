@@ -1,4 +1,4 @@
-import { validarCEP, contarPalavras, verificarSenhaForte, ehPar} from "./controllers/ApiController";
+import { validarCEP, contarPalavras, verificarSenhaForte, ehPar, converterParaBinario, mediaArray} from "./controllers/ApiController";
 
 
 console.log("=== Teste manual ===");
@@ -23,5 +23,8 @@ console.log(ehPar(10));
 console.log(ehPar(7));   
 console.log(ehPar(0));   
 console.log(ehPar(-2));  
+
+mediaArray([1,2,3,4]);
+converterParaBinario(10);
 
 

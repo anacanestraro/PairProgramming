@@ -22,6 +22,15 @@ describe("Testes da API", () => {
     expect(ehPar("3")).toBe(false);
   });
 
+  it("Converter para binario", () => {
+    expect(converterParaBinario(1)).toBe("1");
+  });
+
+  it("Media array", () => {
+    expect(mediaArray([1,2,3,4])).toBe(10);
+  });
+
+
 });
 
 
