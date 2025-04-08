@@ -18,8 +18,8 @@ describe("Testes da API", () => {
   });
 
   it("Deve verificar se o número é par", async () =>{
-    expect(ehPar("4")).toBe(true);
-    expect(ehPar("3")).toBe(false);
+    expect(ehPar(4)).toBe(true);
+    expect(ehPar(3)).toBe(false);
   });
 
   it("Converter para binario", () => {
