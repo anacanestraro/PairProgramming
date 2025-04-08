@@ -36,3 +36,19 @@ export const verificarSenhaForte = (senha: string): boolean => {
   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
   return regex.test(senha);
 };
+
+export function converterParaBinario(numero: number): string{
+  let resultado = numero.toString(2);
+
+  console.log(resultado);
+  return resultado;
+};
+
+export function mediaArray(numeros:number[]):number{
+  let total = 0;
+  for ( var i = 0; i < numeros.length; i++ ){
+    total += numeros[i];
+  }
+  console.log(total);
+  return total;
+}
