@@ -1,5 +1,5 @@
 import server from "../server";
-import { validarCEP, contarPalavras, verificarSenhaForte, ehPar} from "../controllers/ApiController";
+import { validarCEP, contarPalavras, verificarSenhaForte, ehPar, converterParaBinario, mediaArray} from "../controllers/ApiController";
 
 describe("Testes da API", () => {
   it("Deve validar cep", async () =>{
