@@ -1,13 +1,18 @@
-import request from "supertest";
 import server from "../server";
+import { validarCEP, contarPalavras} from "../controllers/ApiController";
 
 describe("Testes da API", () => {
-  it("Deve retornar uma saudação na rota /saudacao", async () => {
-    const response = await request(server).get("/saudacao");
-
-    expect(response.status).toBe(200);
-    expect(response.body).toEqual({ mensagem: "Olá, bem-vindo à API!" });
+  it("Deve validar cep", async () =>{
+    expect(validarCEP("12345-678")).toBe(true);
+    expect(validarCEP("AE514-981")).toBe(false);
   });
+
+  it("Deve contar palavras", async () => { 
+    expect(contarPalavras("Isso é um teste simples")).toEqual(5);
+    expect(contarPalavras("  ESPAÇOS EXTRAS  ")).toEqual(2);
+  });
+
 });
 
-atatata
+
+
